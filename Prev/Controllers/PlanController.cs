@@ -18,7 +18,8 @@ namespace Prev.Controllers
             _context = context;
         }
 
-
+        [HttpGet]
+        [Route("v1/plan")]
         public async Task<ActionResult<List<Plan>>> Get()
         {
             try
@@ -39,6 +40,8 @@ namespace Prev.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("v1/plan")]
         public async Task<ActionResult<Plan>> Post([FromBody]Plan plan)
         {
             if (!ModelState.IsValid)
@@ -46,8 +49,15 @@ namespace Prev.Controllers
 
             try
             {
+                Random randNum = new Random();
+                var numero = randNum.Next(200);
+                plan.Code = numero;
+                plan.StartDate = System.DateTime.Today;
                 _context.Plan.Add(plan);
+
+
                 await _context.SaveChangesAsync();
+
 
                 return Ok(plan);
             }
@@ -57,6 +67,28 @@ namespace Prev.Controllers
             }
         }
 
+
+        [HttpPost]
+        [Route("v1/plan/target")]
+        public async Task<ActionResult<List<Plan>>> GetByTarget([FromBody]User user)
+        {
+            try
+            {
+                var plans = await _context.Plan.AsNoTracking().Where(x => x.Target == user.Target).ToListAsync();
+
+                if (plans == null)
+                    return NotFound(new { Erro = "Não foi encontrado nenhum plano para seu perfil!" });
+                return Ok(plans);
+
+            }
+
+
+
+            catch (Exception)
+            {
+                return BadRequest(new { Erro = "Não foi possível buscar os planos!" });
+            }
+        }
 
     }
 }

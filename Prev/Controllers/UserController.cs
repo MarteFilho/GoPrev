@@ -39,6 +39,16 @@ namespace Prev.Controllers
 
             try
             {
+                
+                
+                    var code = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                    var random = new Random();
+                    var usercode = new string(
+                        Enumerable.Repeat(code, 8)
+                                  .Select(s => s[random.Next(s.Length)])
+                                  .ToArray());
+                user.UserCode = usercode;
+                
                 _context.User.Add(user);
                 await _context.SaveChangesAsync();
 

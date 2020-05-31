@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Prev.Context;
 
 namespace Prev.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20200531150732_v9")]
+    partial class v9
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -121,9 +123,6 @@ namespace Prev.Migrations
                     b.Property<string>("UserCode")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("firstLogin")
-                        .HasColumnType("bit");
-
                     b.HasKey("Id");
 
                     b.HasIndex("PlanId");
@@ -140,7 +139,7 @@ namespace Prev.Migrations
 
             modelBuilder.Entity("Prev.Models.User", b =>
                 {
-                    b.HasOne("Prev.Models.Plan", "Plan")
+                    b.HasOne("Prev.Models.Plan", null)
                         .WithMany("Users")
                         .HasForeignKey("PlanId");
                 });

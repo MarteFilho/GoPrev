@@ -20,12 +20,15 @@ namespace Prev.Models
         [MaxLength(120)]
         public string Description { get; set; }
 
-        [Required]
+
         public DateTime StartDate { get; set; }
         public DateTime FinalDate { get; set; }
         public List<User> Users { get; set; }
 
         public decimal Price { get; set; }
         public decimal Rate { get; set; }
+        public Company Company { get; set; }
+        public decimal Code { get; set; }
+        public string Target { get; set; }
     }
 }

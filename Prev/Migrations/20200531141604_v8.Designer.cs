@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Prev.Context;
 
 namespace Prev.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20200531141604_v8")]
+    partial class v8
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,6 +29,9 @@ namespace Prev.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Target")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -68,9 +73,6 @@ namespace Prev.Migrations
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Target")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -115,14 +117,8 @@ namespace Prev.Migrations
                     b.Property<double>("Points")
                         .HasColumnType("float");
 
-                    b.Property<string>("Target")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("UserCode")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("firstLogin")
-                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -140,7 +136,7 @@ namespace Prev.Migrations
 
             modelBuilder.Entity("Prev.Models.User", b =>
                 {
-                    b.HasOne("Prev.Models.Plan", "Plan")
+                    b.HasOne("Prev.Models.Plan", null)
                         .WithMany("Users")
                         .HasForeignKey("PlanId");
                 });

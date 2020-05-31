@@ -33,7 +33,9 @@ namespace Prev.Models
 
         public double Points { get; set; }
         public string UserCode { get; set; }
-
+        public string Target { get; set; }
+        public Plan Plan { get; set; }
+        public bool firstLogin { get; set; }
 
     }
 }
