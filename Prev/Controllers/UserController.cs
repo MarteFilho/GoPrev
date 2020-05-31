@@ -30,10 +30,6 @@ namespace Prev.Controllers
 
 
             }
-            catch (Exception)
-            {
-                return BadRequest(new { Erro = "Não foi possível buscar os usuários" });
-            }
         }
 
 
