@@ -22,6 +22,8 @@ namespace Prev.Controllers
         [Route("v1/user")]
         public async Task<ActionResult<List<User>>> Get()
         {
+        if (User == null)
+                return BadRequest();
             var users = await _context.User.AsNoTracking().ToListAsync();
 
             return Ok(users);
