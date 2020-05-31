@@ -27,12 +27,10 @@ namespace Prev
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-<<<<<<< HEAD
            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-=======
-            services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("DataBase"));
-           // services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
->>>>>>> 5a6c47fa2ca4c7a49f6299f4c4f4a20ca1b1d970
+
+            //services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("DataBase"));
+            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddCors();
             services.AddControllers();
