@@ -91,5 +91,29 @@ namespace Prev.Controllers
             }
         }
 
+        [HttpPut]
+        [Route("v1/plan/adduser/{id:int}")]
+        public async Task<ActionResult<List<Plan>>> GetByTarget([FromBody]User user, int id)
+        {
+            if (id != user.Id)
+                return NotFound(new { Erro = "Usuário não encontrado!" });
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            try
+            {
+                _context.Entry<User>(user).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+                return Ok(user);
+
+            }
+            catch (Exception)
+            {
+
+                return BadRequest(new { erro = "Não foi possível adicionar o usuário ao plano!" });
+            }
+        }
+
     }
 }
