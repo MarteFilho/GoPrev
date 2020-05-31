@@ -115,9 +115,12 @@ namespace Prev.Migrations
                     b.Property<double>("Points")
                         .HasColumnType("float");
 
+<<<<<<< HEAD
                     b.Property<string>("Target")
                         .HasColumnType("nvarchar(max)");
 
+=======
+>>>>>>> 5a6c47fa2ca4c7a49f6299f4c4f4a20ca1b1d970
                     b.Property<string>("UserCode")
                         .HasColumnType("nvarchar(max)");
 

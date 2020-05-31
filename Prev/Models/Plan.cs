@@ -27,8 +27,11 @@ namespace Prev.Models
 
         public decimal Price { get; set; }
         public decimal Rate { get; set; }
+<<<<<<< HEAD
         public Company Company { get; set; }
         public decimal Code { get; set; }
         public string Target { get; set; }
+=======
+>>>>>>> 5a6c47fa2ca4c7a49f6299f4c4f4a20ca1b1d970
     }
 }
