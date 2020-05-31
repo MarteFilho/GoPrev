@@ -32,8 +32,19 @@ namespace Prev.Models
         public decimal Phone { get; set; }
 
         public double Points { get; set; }
+        [MinLength(2)]
+        [MaxLength(120)]
         public string UserCode { get; set; }
+        [MinLength(2)]
+        [MaxLength(120)]
+        public string Codeaffiliate { get; set; }
+
+        [MinLength(2)]
+        [MaxLength(120)]
         public string Target { get; set; }
+
+        [MinLength(2)]
+        [MaxLength(120)]
         public string Profession { get; set; }
         public decimal Investiment { get; set; }
         public Plan Plan { get; set; }

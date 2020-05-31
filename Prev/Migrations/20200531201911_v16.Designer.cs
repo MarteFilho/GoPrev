@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Prev.Context;
 
 namespace Prev.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20200531201911_v16")]
+    partial class v16
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -114,10 +116,6 @@ namespace Prev.Migrations
                         .HasColumnType("nvarchar(11)")
                         .HasMaxLength(11);
 
-                    b.Property<string>("Codeaffiliate")
-                        .HasColumnType("nvarchar(120)")
-                        .HasMaxLength(120);
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(120)")
@@ -149,16 +147,13 @@ namespace Prev.Migrations
                         .HasColumnType("float");
 
                     b.Property<string>("Profession")
-                        .HasColumnType("nvarchar(120)")
-                        .HasMaxLength(120);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Target")
-                        .HasColumnType("nvarchar(120)")
-                        .HasMaxLength(120);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserCode")
-                        .HasColumnType("nvarchar(120)")
-                        .HasMaxLength(120);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("firstLogin")
                         .HasColumnType("bit");
