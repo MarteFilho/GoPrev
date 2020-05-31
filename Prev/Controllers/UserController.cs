@@ -25,7 +25,7 @@ namespace Prev.Controllers
             var users = await _context.User.AsNoTracking().ToListAsync();
             if (users == null)
                 return BadRequest();
-            return Ok(users);
+            return BadRequest();
 
         }
 
