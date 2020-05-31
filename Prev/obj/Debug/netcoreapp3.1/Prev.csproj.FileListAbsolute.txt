@@ -50,3 +50,6 @@ C:\Users\Marcos\source\repos\Prev\Prev\bin\Debug\netcoreapp3.1\runtimes\win\lib\
 C:\Users\Marcos\source\repos\Prev\Prev\obj\Debug\netcoreapp3.1\Prev.dll
 C:\Users\Marcos\source\repos\Prev\Prev\obj\Debug\netcoreapp3.1\Prev.pdb
 C:\Users\Marcos\source\repos\Prev\Prev\obj\Debug\netcoreapp3.1\Prev.genruntimeconfig.cache
+C:\Users\Marcos\source\repos\Prev\Prev\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Marcos\source\repos\Prev\Prev\obj\Debug\netcoreapp3.1\Prev.csproj.CoreCompileInputs.cache
+C:\Users\Marcos\source\repos\Prev\Prev\obj\Debug\netcoreapp3.1\Prev.MvcApplicationPartsAssemblyInfo.cache
