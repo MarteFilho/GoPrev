@@ -29,6 +29,12 @@ namespace Prev.Controllers
 
         }
 
+        [HttpGet]
+        [Route("v1/erro")]
+        public Exception erro()
+        {
+            return new Exception();   
+        }
 
         [HttpPost]
         [Route("v1/user")]
