@@ -12,5 +12,6 @@ namespace Prev.Context
         public DbSet<User> User { get; set; }
         public DbSet<Plan> Plan { get; set; }
         public DbSet<Company> Companies { get; set; }
+        public DbSet<PlanHealth> PlanHealths { get; set; }
     }
 }

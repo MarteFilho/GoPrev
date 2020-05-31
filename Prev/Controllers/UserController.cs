@@ -76,9 +76,27 @@ namespace Prev.Controllers
                 return BadRequest(new { Erro = "Não foi possível se conectar com o banco de dados para a criação do usuário!" });
             }
 
+          
 
         }
-      
+
+        [HttpPut]
+        [Route("v1/login")]
+        public async Task<ActionResult<dynamic>> Edit([FromBody]User model)
+        {
+            try
+            {
+                _context.Entry<User>(model).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+                return Ok(model);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
 
     }
 }
