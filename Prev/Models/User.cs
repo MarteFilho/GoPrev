@@ -29,6 +29,8 @@ namespace Prev.Models
 
         [Required]
         public decimal Phone { get; set; }
+
+        public double Points { get; set; }
         public string UserCode { get; set; }
 
 

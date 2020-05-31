@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6pFZbotOVP2w3vIJJp17nXXw0J0N+pOTZSN57hzd5kOFzC0dgUMwIbFYfTQJASESXjkx6mzlN6LhuTV3bUjQSg==",
+  "dgSpecHash": "tfL+r78AcRHYvi71BuVLIEtLA95VEyaWQ6HvAQNphOosDJD632bZ7vyjLQuoWy+9thPP2aslarfy5a3QwhbC8A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Marcos\\source\\repos\\Prev\\Prev\\Prev.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\Marcos\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.4\\microsoft.entityframeworkcore.abstractions.3.1.4.nupkg.sha512",
     "C:\\Users\\Marcos\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.4\\microsoft.entityframeworkcore.analyzers.3.1.4.nupkg.sha512",
     "C:\\Users\\Marcos\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.4\\microsoft.entityframeworkcore.design.3.1.4.nupkg.sha512",
+    "C:\\Users\\Marcos\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\3.1.4\\microsoft.entityframeworkcore.inmemory.3.1.4.nupkg.sha512",
     "C:\\Users\\Marcos\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.4\\microsoft.entityframeworkcore.relational.3.1.4.nupkg.sha512",
     "C:\\Users\\Marcos\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.4\\microsoft.entityframeworkcore.sqlserver.3.1.4.nupkg.sha512",
     "C:\\Users\\Marcos\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.4\\microsoft.entityframeworkcore.tools.3.1.4.nupkg.sha512",

@@ -28,8 +28,6 @@ C:\Users\Marcos\source\repos\Prev\Prev\bin\Debug\netcoreapp3.1\System.Diagnostic
 C:\Users\Marcos\source\repos\Prev\Prev\obj\Debug\netcoreapp3.1\Prev.csproj.CopyComplete
 C:\Users\Marcos\source\repos\Prev\Prev\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Marcos\source\repos\Prev\Prev\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Marcos\source\repos\Prev\Prev\obj\Debug\netcoreapp3.1\Prev.csproj.CoreCompileInputs.cache
-C:\Users\Marcos\source\repos\Prev\Prev\obj\Debug\netcoreapp3.1\Prev.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Marcos\source\repos\Prev\Prev\bin\Debug\netcoreapp3.1\Prev.deps.json
 C:\Users\Marcos\source\repos\Prev\Prev\bin\Debug\netcoreapp3.1\Prev.runtimeconfig.json
 C:\Users\Marcos\source\repos\Prev\Prev\bin\Debug\netcoreapp3.1\Prev.runtimeconfig.dev.json
