@@ -18,12 +18,9 @@ namespace Prev.Controllers
             _context = context;
         }
 
-<<<<<<< HEAD
         [HttpGet]
         [Route("v1/plan")]
-=======
 
->>>>>>> 5a6c47fa2ca4c7a49f6299f4c4f4a20ca1b1d970
         public async Task<ActionResult<List<Plan>>> Get()
         {
             try
