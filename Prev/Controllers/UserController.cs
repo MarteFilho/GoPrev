@@ -26,8 +26,6 @@ namespace Prev.Controllers
             {
                 var users = await _context.User.AsNoTracking().ToListAsync();
 
-                if (users == null)
-                    return NotFound(new { Erro = "Não foi encontrado nenhum usuário!" });
                 return Ok(users);
 
 
