@@ -23,18 +23,11 @@ namespace Prev.Controllers
         public async Task<ActionResult<List<User>>> Get()
         {
             var users = await _context.User.AsNoTracking().ToListAsync();
-            if (users == null)
-                return BadRequest();
-            return BadRequest();
 
+            return users;
         }
 
-        [HttpGet]
-        [Route("v1/erro")]
-        public Exception erro()
-        {
-            return new Exception();   
-        }
+        
 
         [HttpPost]
         [Route("v1/user")]
