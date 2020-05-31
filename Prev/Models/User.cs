@@ -30,12 +30,6 @@ namespace Prev.Models
 
         [Required]
         public decimal Phone { get; set; }
-<<<<<<< HEAD
-=======
-
-        public double Points { get; set; }
-        public string UserCode { get; set; }
->>>>>>> 5a6c47fa2ca4c7a49f6299f4c4f4a20ca1b1d970
 
         public double Points { get; set; }
         public string UserCode { get; set; }
