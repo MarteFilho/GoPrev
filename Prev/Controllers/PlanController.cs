@@ -93,7 +93,7 @@ namespace Prev.Controllers
 
         [HttpPut]
         [Route("v1/plan/adduser/{id:int}")]
-        public async Task<ActionResult<List<Plan>>> GetByTarget([FromBody]User user, int id)
+        public async Task<ActionResult<List<Plan>>> GetByTarget(int id, [FromBody]User user)
         {
             if (id != user.Id)
                 return NotFound(new { Erro = "Usuário não encontrado!" });
