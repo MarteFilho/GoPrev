@@ -25,5 +25,7 @@ namespace Prev.Models
         public DateTime FinalDate { get; set; }
         public List<User> Users { get; set; }
 
+        public decimal Price { get; set; }
+        public decimal Rate { get; set; }
     }
 }

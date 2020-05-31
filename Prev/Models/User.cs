@@ -27,8 +27,11 @@ namespace Prev.Models
         [MaxLength(11)]
         public string CPF { get; set; }
 
+
         [Required]
         public decimal Phone { get; set; }
+
+        public double Points { get; set; }
         public string UserCode { get; set; }
 
 

@@ -4,6 +4,7 @@ using Prev.Context;
 using Prev.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
@@ -21,22 +22,12 @@ namespace Prev.Controllers
         [Route("v1/user")]
         public async Task<ActionResult<List<User>>> Get()
         {
-            try
-            {
-                var users = await _context.User.AsNoTracking().ToListAsync();
+            var users = await _context.User.AsNoTracking().ToListAsync();
 
-                if (users == null)
-                    return NotFound(new { Erro = "Não foi encontrado nenhum usuário!" });
-                return Ok(users);
-
-
-            }
-            catch (Exception)
-            {
-                return BadRequest(new { Erro = "Não foi possível buscar os usuários" });
-            }
+            return users;
         }
 
+ 
 
         [HttpPost]
         [Route("v1/user")]
@@ -59,6 +50,26 @@ namespace Prev.Controllers
             }
         }
 
+
+        [HttpPost]
+        [Route("v1/login")]
+        public async Task<ActionResult<dynamic>> Login([FromBody]User model)
+        {
+            try
+            {
+                var user = await _context.User.AsNoTracking().Where(x => x.CPF == model.CPF && x.Password == model.Password).FirstOrDefaultAsync();
+
+                if (user == null)
+                    return NotFound(new {Erro = "Usuário ou senha inválidos!" });
+                return Ok(user);
+            }
+            catch (Exception)
+            {
+                return BadRequest(new { Erro = "Não foi possível se conectar com o banco de dados para a criação do usuário!" });
+            }
+
+
+        }
       
 
     }
