@@ -30,7 +30,6 @@ namespace Prev
            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             //services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("DataBase"));
-            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddCors();
             services.AddControllers();
