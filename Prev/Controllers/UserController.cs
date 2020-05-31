@@ -46,12 +46,34 @@ namespace Prev.Controllers
                                   .Select(s => s[random.Next(s.Length)])
                                   .ToArray());
                 user.UserCode = usercode;
-                
+
                 _context.User.Add(user);
                 await _context.SaveChangesAsync();
 
+                if (user.Codeaffiliate != null)
+                {
+
+                    try
+                    {
+                        var ownerCode = await _context.User.Where(x => x.UserCode == user.Codeaffiliate).FirstOrDefaultAsync();
+                        if (ownerCode == null)
+                            return NotFound(new { Erro = "Usuário dono do código não foi encontrado!" });
+
+                        ownerCode.Points = ownerCode.Points + 100;
+                        await _context.SaveChangesAsync();
+                        return Ok();
+                    }
+                    catch (Exception)
+                    {
+                        return BadRequest(new { Erro = "Não foi possível se conectar com o banco de dados para a validação do código!" });
+                    }
+                }
+
                 return Ok(user);
+
+
             }
+
             catch (Exception)
             {
                 return BadRequest(new { Erro = "Não foi possível se conectar com o banco de dados para a criação do usuário!" });
@@ -96,7 +118,6 @@ namespace Prev.Controllers
                 throw;
             }
         }
-
 
     }
 }

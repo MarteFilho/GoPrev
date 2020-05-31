@@ -31,5 +31,8 @@ namespace Prev.Models
         public decimal Code { get; set; }
         public string Target { get; set; }
 
+        [Required]
+        public string ImageURL { get; set; }
+
     }
 }
