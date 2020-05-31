@@ -22,14 +22,12 @@ namespace Prev.Controllers
         [Route("v1/user")]
         public async Task<ActionResult<List<User>>> Get()
         {
-            try
-            {
+           
                 var users = await _context.User.AsNoTracking().ToListAsync();
 
                 return Ok(users);
 
 
-            }
         }
 
 
