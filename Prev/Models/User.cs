@@ -35,7 +35,7 @@ namespace Prev.Models
         public string UserCode { get; set; }
         public string Target { get; set; }
         public string Profession { get; set; }
-        public decimal Decimal { get; set; }
+        public decimal Investiment { get; set; }
         public Plan Plan { get; set; }
         public PlanHealth PlanHealth { get; set; }
         public bool firstLogin { get; set; }
