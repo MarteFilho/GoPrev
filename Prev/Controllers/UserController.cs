@@ -115,7 +115,8 @@ namespace Prev.Controllers
             catch (Exception)
             {
 
-                throw;
+                return BadRequest(new { Erro = "Não foi possível se conectar com o banco de dados para a criação do usuário!" });
+
             }
         }
 
